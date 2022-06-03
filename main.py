@@ -14,8 +14,8 @@ link =  'https://steamcommunity.com/'
 skin_arr = ["https://steamcommunity.com/market/listings/730/SG%20553%20%7C%20Army%20Sheen%20%28Factory%20New%29"]
 
 chrome_options = Options()
-chrome_options.add_extension('/Users/danilserbakov/Downloads/extension_2_4_3_0.crx')
-chrome_options.add_extension('/Users/danilserbakov/Downloads/extension_4_4_0_0.crx')
+chrome_options.add_extension('extension_2_4_3_0.crx')
+chrome_options.add_extension('extension_4_4_0_0.crx')
 # инициализируем драйвер браузера. После этой команды вы должны увидеть новое открытое окно браузера
 
 class Bot:
