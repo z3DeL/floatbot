@@ -16,6 +16,10 @@ skin_arr = ["https://steamcommunity.com/market/listings/730/SG%20553%20%7C%20Arm
 chrome_options = Options()
 chrome_options.add_extension('extension_2_4_3_0.crx')
 chrome_options.add_extension('extension_4_4_0_0.crx')
+chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+chrome_options.add_argument("--headless")
+chrome_options.add_argument("--disable-dev-shm-usage")
+chrome_options.add_argument("--no-sandbox")
 # инициализируем драйвер браузера. После этой команды вы должны увидеть новое открытое окно браузера
 
 class Bot:
@@ -23,7 +27,7 @@ class Bot:
     def __init__(self):
         self.user = login
         self.password = password
-        self.driver = webdriver.Chrome(options=chrome_options)
+        self.driver = driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options)
         self.cookie = "cookies.pickle"
         self.skins_array = skin_arr
 
